@@ -10,7 +10,7 @@
     align-items: center;
     padding: 1rem 4rem;
 }
-.menu-nav {
+.menu-nav{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -32,10 +32,38 @@
 }
 .nav{
     padding: 1rem 5rem;
+    font-weight: bold;
 }
-.list-items{
+.list-items-light{
     background-color: black;
     padding: 5px 2rem;
     border-radius: 31px;
     color: white;
+}
+.moon{
+    height: 32px;
+    width: 32px;
+    margin-left: 4.5rem;
+    margin-top: 10px;
+}
+.sun{
+    height: 32px;
+    width: 32px;
+    margin-left: 4.5rem;
+    margin-top: 10px;
+    color: coral;
+}
+.dark{
+    background-color: black;
+    color: white;
+}
+.light{
+    background-color: white;
+    color: black;
+}
+.list-items-dark{
+    background-color: white;
+    padding: 5px 2rem;
+    border-radius: 31px;
+    color: black;
 }
