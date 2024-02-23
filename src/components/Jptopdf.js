@@ -6,15 +6,25 @@ function Jptopdf(props) {
   const [pdfUrl, setPdfUrl] = useState("");
   const handleImageChange = (event) => {
     const files = event.target.files;
-    const imageFiles = [];
+    handleFiles(files);
+  }
+    const handleDrop = (event) => {
+      event.preventDefault();
+      const files = event.dataTransfer.files;
+      handleFiles(files);
+    };
 
-    for (let i = 0; i < files.length; i++) {
-      const file = files[i];
-      if (file.type.startsWith("image/")) {
-        const imageUrl = URL.createObjectURL(file);
-        imageFiles.push({ url: imageUrl, file });
+    const handleFiles = (files) => {
+      const imageFiles = [];
+  
+      for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        if (file.type.startsWith("image/")) {
+          const imageUrl = URL.createObjectURL(file);
+          imageFiles.push({ url: imageUrl, file });
+        }
       }
-    }
+  
 
     setSelectedImages([...selectedImages, ...imageFiles]);
   };
@@ -68,6 +78,11 @@ function Jptopdf(props) {
   return (
     <>
       <div className="img-header">
+      <div
+        className="img-header"
+        onDragOver={(event) => event.preventDefault()}
+        onDrop={handleDrop}
+      >
         <div className={`upload-heading ${props.mode}`}>UPLOAD YOUR IMAGES HERE</div>
         <div className="uploading">
           <div className="upload-content">
@@ -101,9 +116,9 @@ function Jptopdf(props) {
             </div>
             <div className="drag">
               <h3>DRAG AND DROP FILES OR BROWSE </h3>
-              <p>SUPPORTED FORMATS: jpg, jpeg </p>
             </div>
           </div>
+        </div>
         </div>
       </div>
       <div className="image-grid">
@@ -131,5 +146,4 @@ function Jptopdf(props) {
     </>
   );
 }
-
 export default Jptopdf;

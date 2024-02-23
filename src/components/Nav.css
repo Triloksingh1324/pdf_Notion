@@ -30,6 +30,7 @@
 .logo{
     padding: 0rem 5rem;
 }
+
 .nav{
     padding: 1rem 5rem;
     font-weight: bold;
@@ -66,4 +67,16 @@
     padding: 5px 2rem;
     border-radius: 31px;
     color: black;
+}
+@media(max-width:1000px){
+    .nav ul {
+
+        display: none;
+    }
+    .logo-name{
+        font-size: large;
+    }
+    .logo{
+        padding: 0rem 1rem;
+    }
 }

@@ -19,7 +19,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center; /* Center content vertically */
-    border: 2px dotted blue;
     border-radius: 8px;
     margin: 3rem;
     
@@ -118,4 +117,21 @@
 
 .dark{
    color: white;
+}
+@media(max-width:900px) {
+    .upload-content {
+        border-radius: 16px;
+        padding: 1rem;
+        width: 50vw;
+        height: 20vh;
+    
+    }
+    .upload-heading{
+        font-weight: bolder;
+        font-size: 1rem;
+    }
+    .uploading {
+        margin: 2rem;
+        
+    }
 }
