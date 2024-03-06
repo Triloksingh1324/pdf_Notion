@@ -24,7 +24,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 0rem;
     border-radius: 10px;
     height: 30rem;
     background: #000046;  /* fallback for old browsers */
