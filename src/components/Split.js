@@ -138,8 +138,6 @@ function Split(props) {
       {loading && <div>Loading PDF...</div>}
       {!loading && file && (
         <div className="pdf-preview">
-          {/* <embed src={URL.createObjectURL(file)} type="application/pdf" width="20px" height="50px" /> */}
-
           <embed
             src={URL.createObjectURL(file)}
             type="application/pdf"

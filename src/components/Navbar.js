@@ -3,10 +3,7 @@ import './Nav.css';
 import { Link } from 'react-router-dom';
 
 function Navbar(props) {
-  // State to manage the visibility of dropdown menu
   const [showDropdown, setShowDropdown] = useState(false);
-
-  // Function to toggle the visibility of dropdown menu
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
@@ -43,7 +40,6 @@ function Navbar(props) {
               </svg>
             )}
           </div>
-          {/* Hamburger Icon */}
           <div className="hamburger" onClick={toggleDropdown}>
             <div className={`line-${props.mode}`}></div>
             <div className={`line-${props.mode}`}></div>
